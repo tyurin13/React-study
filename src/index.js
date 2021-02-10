@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CounterPage from './components/CounterPage';
-import MainPage from './components/MainPage';
+import CounterContainer from './components/CounterPage/CounterContainer';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CounterPage />
+    <CounterContainer />
   </React.StrictMode>,
   document.getElementById('root')
 );
