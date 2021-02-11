@@ -8,7 +8,7 @@ class CounterContainer extends Component {
 
     this.state = {
       countValue: 0,
-      parityType: 'Even'
+      isEven: true
     }
   }
 
@@ -35,8 +35,8 @@ class CounterContainer extends Component {
   };
 
   checkParity = () => {
-    const checkParityResult = this.state.countValue % 2 === 0 ? 'Odd' : 'Even'
-    this.setState({parityType: checkParityResult})
+    const checkParityResult = this.state.countValue % 2 === 0 ? true : false;
+    this.setState({isEven: checkParityResult})
   }
 
   render() {
@@ -45,7 +45,7 @@ class CounterContainer extends Component {
       <div>
         <Counter 
           countValue={this.state.countValue}
-          parityType={this.state.parityType}
+          isEven={this.state.isEven}
           handleIncrease={this.handleIncrease}
           handleDecrease={this.handleDecrease}
           handleReset={this.handleReset}

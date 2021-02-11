@@ -14,9 +14,10 @@ button {
 
 .btnWrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-between;
+  align-self: center;
+  box-sizing: border-box;
+  justify-content: space-around;
+  padding-left: 30px;
 }
 
 .counterArea {
@@ -29,9 +30,27 @@ button {
   background: linear-gradient(45deg, #EECFBA, #C5DDE8);
 }
 
-.numberArea, .parityArea {
+.numberArea {
   border: 1px solid rgb(0, 59, 13);
   background: #fff;
+  max-width: 30%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.parityAreaEven {
+  border: 1px solid rgb(0, 59, 13);
+  background: rgba(0, 255, 0, 0.301);
+  max-width: 30%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.parityAreaOdd {
+  border: 1px solid rgb(0, 59, 13);
+  background: rgba(255, 0, 0, 0.301);
   max-width: 30%;
   padding: 10px;
   margin: 10px auto;
