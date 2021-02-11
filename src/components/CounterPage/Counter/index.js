@@ -1,24 +1,28 @@
 import PropTypes from 'prop-types';
+import s from './style.css';
 
 const Counter = ({ countValue, parityType, handleIncrease, handleDecrease, handleReset }) => {
 
   return (
 
-    <div>
-        <div>{countValue}</div>
-        <div>{parityType}</div>
+    <div className='counterArea'>
+      <div className='numberArea'>{countValue}</div>
+      <div className='parityArea'>{parityType}</div>
+      <div className='btnWrapper'>
         <div>
-          <div>
-            <button onClick={handleDecrease}>-</button>
-          </div>
-          <div>
-            <button onClick={handleIncrease}>+</button>
-          </div>
-          <div>
-            <button onClick={handleReset}>Reset</button>
-          </div>
+          <button onClick={handleDecrease}>-</button>
+        </div>
+        <div>
+          <button onClick={handleIncrease}>+</button>
+        </div>
+        <div>
+          <button onClick={handleReset}>Reset</button>
         </div>
       </div>
+      <div>
+        <button> <a href="/">Go to main</a> </button>
+      </div>
+    </div>
   )
 }
 

@@ -5,7 +5,7 @@ class MainPage extends Component {
 
     return (
       <div>
-        <button>Go To Counter</button>
+        <button> <a href="/counter">Go To Counter</a></button>
       </div>
     )
   }

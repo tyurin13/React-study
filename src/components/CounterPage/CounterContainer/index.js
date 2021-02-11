@@ -21,6 +21,7 @@ class CounterContainer extends Component {
 
     if (this.state.countValue <= 0) {
       this.setState({countValue: 0})
+      
     } else {
       this.setState({countValue: this.state.countValue - 1});
     }

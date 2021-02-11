@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: rgba(162, 152, 255, 0.993);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.counterArea {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid red;
+  max-width: 30%;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+
+.numberArea, .parityArea {
+  border: 1px solid rgb(0, 59, 13);
+  background: #fff;
+  max-width: 30%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
