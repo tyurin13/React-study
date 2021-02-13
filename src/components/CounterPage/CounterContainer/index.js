@@ -1,6 +1,6 @@
 import { Component } from "react";
-import Counter from "../Counter";
 
+import Counter from "../Counter";
 
 class CounterContainer extends Component {
   constructor(props) {
@@ -13,37 +13,40 @@ class CounterContainer extends Component {
   }
 
   handleIncrease = () => {
-    this.setState({countValue: this.state.countValue + 1});
-    this.checkParity();
+    this.setState(() => { return { countValue: this.state.countValue + 1 } });
   };
 
   handleDecrease = () => {
 
     if (this.state.countValue <= 0) {
-      this.setState({countValue: 0})
-      
-    } else {
-      this.setState({countValue: this.state.countValue - 1});
-    }
+      this.setState({ countValue: 0 })
 
-    this.checkParity();
+    } else {
+      this.setState(() => { return { countValue: this.state.countValue - 1 } });
+    }
   };
 
   handleReset = () => {
-    this.setState({countValue: 0});
-    this.checkParity();
+    this.setState({ countValue: 0 });
   };
 
   checkParity = () => {
     const checkParityResult = this.state.countValue % 2 === 0 ? true : false;
-    this.setState({isEven: checkParityResult})
+    this.setState({ isEven: checkParityResult })
+  }
+
+  componentDidUpdate(prevProps) {
+
+    if (this.state.isEven !== this.prevProps) {
+      this.checkParity()
+    };
   }
 
   render() {
 
     return (
       <div>
-        <Counter 
+        <Counter
           countValue={this.state.countValue}
           isEven={this.state.isEven}
           handleIncrease={this.handleIncrease}

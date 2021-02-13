@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import './style.css';
 
 const Counter = ({ countValue, isEven, handleIncrease, handleDecrease, handleReset }) => {
@@ -7,7 +9,7 @@ const Counter = ({ countValue, isEven, handleIncrease, handleDecrease, handleRes
 
     <div className='counterArea'>
       <div className='numberArea'>{countValue}</div>
-      <div className={isEven ? 'parityAreaOdd' : 'parityAreaEven'}>{isEven ? 'Odd' : 'Even'}</div>
+      <div className={isEven ? 'parityAreaEven' : 'parityAreaOdd'}>{isEven ? 'Even' : 'Odd'}</div>
       <div className='btnWrapper'>
         <div>
           <button className='minusBtn' onClick={handleDecrease}>-</button>
@@ -20,7 +22,7 @@ const Counter = ({ countValue, isEven, handleIncrease, handleDecrease, handleRes
         </div>
       </div>
       <div>
-        <button> <a href="/">Go to main</a> </button>
+        <button> <Link to="/">Go to main</Link> </button>
       </div>
     </div>
   )
