@@ -30,15 +30,18 @@ class CounterContainer extends Component {
     this.setState({ countValue: 0 });
   };
 
-  checkParity = () => {
-    const checkParityResult = this.state.countValue % 2 === 0 ? true : false;
-    this.setState({ isEven: checkParityResult })
-  }
+  componentDidUpdate(prevProps, prevState) {
 
-  componentDidUpdate(prevProps) {
+    if (this.state.countValue !== prevState.countValue) {
+      const isEven = this.state.countValue % 2 === 0;
 
-    if (this.state.isEven !== this.prevProps) {
-      this.checkParity()
+      this.setState((state) => {
+
+        return {
+          ...state,
+          isEven
+        }
+      })
     };
   }
 

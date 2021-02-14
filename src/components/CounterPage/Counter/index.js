@@ -22,7 +22,9 @@ const Counter = ({ countValue, isEven, handleIncrease, handleDecrease, handleRes
         </div>
       </div>
       <div>
-        <button> <Link to="/">Go to main</Link> </button>
+        <Link to="/">
+          <button> Go to main </button>
+        </Link>
       </div>
     </div>
   )
