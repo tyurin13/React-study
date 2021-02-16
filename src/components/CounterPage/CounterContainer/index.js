@@ -13,17 +13,13 @@ class CounterContainer extends Component {
   }
 
   handleIncrease = () => {
-    this.setState(() => { return { countValue: this.state.countValue + 1 } });
+    this.setState((state) => ({ countValue: state.countValue + 1 }) );
   };
 
   handleDecrease = () => {
-
-    if (this.state.countValue <= 0) {
-      this.setState({ countValue: 0 })
-
-    } else {
-      this.setState(() => { return { countValue: this.state.countValue - 1 } });
-    }
+    if (this.state.countValue > 0) {
+      this.setState((state) => ({ countValue: state.countValue - 1 }) )
+    };
   };
 
   handleReset = () => {
