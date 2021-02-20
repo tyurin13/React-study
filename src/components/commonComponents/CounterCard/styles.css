@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex
+}
+
+.userData {
+  display: flex;
+}
+
+.userData div {
+  margin-right: 10px;
+}
+
+.userData div:last-of-type {
+  margin-right: 0;
+}
