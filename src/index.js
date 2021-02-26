@@ -1,16 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Routes from './components/Routes/Routes';
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+import ToDoPage from './components/ToDoPage';
 
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <Provider store={store}>
+      <ToDoPage />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
