@@ -4,6 +4,8 @@
 
 .add-todo {
   margin-left: 0.5rem;
+  border: none;
+  background: none;
 }
 
 .todo-list {

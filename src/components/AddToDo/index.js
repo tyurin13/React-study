@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodo } from "../../redux/actions/index";
+import OutlinedButtons from "./AddTaskButton";
 
 const AddToDo = (props) => {
 
@@ -21,9 +22,11 @@ const AddToDo = (props) => {
         onChange={event => updateInput(event.target.value)}
         value={input}
       />
-      <button className="add-todo" onClick={handleAddTodo}>
-        Add Task
-        </button>
+      <button className='add-todo' onClick={handleAddTodo}>
+        <OutlinedButtons />
+      </button>
+
+
     </div>
   );
 }
